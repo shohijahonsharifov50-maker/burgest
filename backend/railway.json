@@ -1,0 +1,12 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "buildCommand": "chmod +x mvnw && ./mvnw -B -DskipTests clean package"
+  },
+  "deploy": {
+    "startCommand": "java -Dserver.port=$PORT -jar target/burgesta-api-1.0.0.jar",
+    "healthcheckPath": "/api/menu",
+    "healthcheckTimeout": 120,
+    "restartPolicyType": "ON_FAILURE"
+  }
+}

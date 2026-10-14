@@ -1,0 +1,15 @@
+# Optional: a local PostgreSQL for trying the `prod` profile.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: burgesta
+      POSTGRES_USER: burgesta
+      POSTGRES_PASSWORD: burgesta
+    ports:
+      - "5432:5432"
+    volumes:
+      - burgesta-db:/var/lib/postgresql/data
+
+volumes:
+  burgesta-db:

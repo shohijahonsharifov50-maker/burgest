@@ -1,5 +1,6 @@
 import { CONTACTS } from '../../config/site';
 import { useI18n } from '../../i18n/LanguageContext';
+import { MapView } from './MapView';
 import { RiseHeading } from './RiseHeading';
 
 export function Visit() {
@@ -18,9 +19,9 @@ export function Visit() {
             </div>
           </dl>
           <div className="map">
-            <iframe title="BURGESTA map" loading="lazy" referrerPolicy="no-referrer-when-downgrade" src={CONTACTS.mapEmbed} />
+            <MapView lat={CONTACTS.mapLat} lng={CONTACTS.mapLng} />
           </div>
-          <div className="visit-photo"><img src="/img/facade-day.jpg" alt="" loading="lazy" /></div>
+          <div className="visit-photo"><img src="/img/facade-night.jpg" alt="" loading="lazy" /></div>
         </div>
       </div>
     </section>

@@ -9,9 +9,9 @@ export const CONTACTS = {
   phoneHref: 'tel:+998555081818',
   phoneLabel: '+998 55 508 18 18',
   directions: 'https://maps.app.goo.gl/c62HkPpGzkd4RgHV9',
-  /** Pin at the restaurant entrance: 41.331129, 69.284623 (87JM+HRM, Tashkent). */
-  mapLat: 41.331129,
-  mapLng: 69.284623,
+  /** Pin at the restaurant entrance, matching Google's verified location for this listing. */
+  mapLat: 41.3315383,
+  mapLng: 69.2845747,
 };
 
 /** Frames of the burger film: a 360° orbit followed by the exploded view. */

@@ -34,9 +34,10 @@ export function MapView({ lat, lng, zoom = 17, name = 'Burgesta', rating = '4.8'
       scrollWheelZoom: false,
     });
 
-    // Voyager basemap (no labels): same road/park colors as OSM but without other businesses' names.
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; OpenStreetMap &copy; CARTO',
+    // Standard OpenStreetMap tiles: free, no API key, shows streets and nearby places (like Google Maps).
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+      subdomains: 'abc',
       maxZoom: 19,
     }).addTo(map);
 
